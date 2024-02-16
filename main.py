@@ -6,6 +6,19 @@ with open('facebook.txt', 'r') as arquivo:
 # criar o grafo 
 grafo = {}
 
+def rastrear_caminho(grafo, quadro_distancias, vertice_inicial, vertice_final):
+    caminho = []
+    atual = vertice_final
+
+    while atual != vertice_inicial:
+        caminho.insert(0, atual)
+        for dados_vizinho in grafo[atual]:
+            vizinho, peso = dados_vizinho
+            if quadro_distancias[atual] == quadro_distancias[vizinho] + peso:
+                atual = vizinho
+    caminho.insert(0, vertice_inicial)
+    return caminho
+
 def dijkstra(grafo, vertice_inicial, vertice_final):
     quadro_distancias = {v: float('inf') for v in  range(len(grafo))}
     quadro_distancias[vertice_inicial] = 0
@@ -20,7 +33,9 @@ def dijkstra(grafo, vertice_inicial, vertice_final):
             if peso_cumulativo < quadro_distancias[vizinho]:
                 quadro_distancias[vizinho] = peso_cumulativo
                 fila_visita.append((peso_cumulativo, vizinho))
-    print(quadro_distancias)
+
+    return rastrear_caminho(grafo, quadro_distancias, vertice_inicial, vertice_final), quadro_distancias[vertice_final]
+    
 
 # Iterar sobre as linhas do arquivo
 for linha in linhas:
@@ -40,7 +55,6 @@ for linha in linhas:
     else:
         grafo[int(valor)] = [(int(chave), numero_aleatorio)]
 
-
-# print(grafo)
-
-dijkstra(grafo, 0, 18)
+trajeto, duracao_conexao = dijkstra(grafo, 0, 3000)
+print(trajeto)
+print(duracao_conexao)
