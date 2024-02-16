@@ -2,8 +2,6 @@ import random
 # Abrir o arquivo txt para leitura
 with open('facebook.txt', 'r') as arquivo:
     linhas = arquivo.readlines()
-# criar o grafo 
-grafo = {}
 
 def rastrear_caminho(grafo: dict, quadro_distancias: dict, vertice_inicial: int, vertice_final: int) -> [int]:
     caminho = []
@@ -39,6 +37,9 @@ def dijkstra(grafo: dict, vertice_inicial: int, vertice_final: int) -> tuple:
 
     return rastrear_caminho(grafo, quadro_distancias, vertice_inicial, vertice_final), quadro_distancias[vertice_final]
     
+# criar o grafo 
+grafo = {}
+
 # Iterar sobre as linhas do arquivo
 for linha in linhas:
     # Divindo em chave e valor
