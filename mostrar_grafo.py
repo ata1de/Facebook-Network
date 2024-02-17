@@ -9,8 +9,9 @@ def visualizar_grafo(grafo):
     
     # Adiciona os vértices e as arestas ao grafo
     for vertice, vizinhos in grafo.items():
-        for vizinho, peso in vizinhos.items():
-            G.add_edge(vertice, vizinho, weight=peso)
+        G.add_edge(vertice, vizinhos[0], weight=vizinhos[1])
+        # for vizinho, peso in vizinhos:
+        #     G.add_edge(vertice, vizinho, weight=peso)
 
     # Posiciona os nós usando o layout Kamada-Kawai
     pos = nx.kamada_kawai_layout(G)
