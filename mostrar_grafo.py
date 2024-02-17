@@ -42,26 +42,30 @@ def criar_janela():
     root = tk.Tk()
     root.title("Visualizador de Grafo")
 
+    label_titulo = tk.Label(root, text="Escreva o vértice inicial e descubra o menor caminho até o vértice final", font=("Helvetica", 16, "bold"))
+    label_titulo.grid(row=0, column=0, columnspan=2, padx=5, pady=10)
+
     label_origem = tk.Label(root, text="Vértice Inicial:")
-    label_origem.grid(row=0, column=0, padx=5, pady=5)
+    label_origem.grid(row=1, column=0, padx=5, pady=5)
     var_origem = tk.StringVar()
     entry_origem = tk.Entry(root, textvariable=var_origem)
-    entry_origem.grid(row=0, column=1, padx=5, pady=5)
+    entry_origem.grid(row=1, column=1, padx=5, pady=5)
 
     label_destino = tk.Label(root, text="Vértice Final:")
-    label_destino.grid(row=1, column=0, padx=5, pady=5)
+    label_destino.grid(row=2, column=0, padx=5, pady=5)
     var_destino = tk.StringVar()
     entry_destino = tk.Entry(root, textvariable=var_destino)
-    entry_destino.grid(row=1, column=1, padx=5, pady=5)
+    entry_destino.grid(row=2, column=1, padx=5, pady=5)
 
     button_enviar = tk.Button(root, text="Enviar", command=lambda: enviar_inputs(root, var_origem, var_destino))
-    button_enviar.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+    button_enviar.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
     return root, var_origem, var_destino
 
 def enviar_inputs(root, var_origem, var_destino):
     origem = var_origem.get()
-    destino = var_destino.get() # Fecha a janela após enviar os inputs
+    destino = var_destino.get() 
+    # Fecha a janela após enviar os inputs
     return origem, destino
 
 def interface_inicial():
