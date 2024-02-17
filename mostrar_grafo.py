@@ -4,7 +4,7 @@ import tkinter as tk
 #pip install scipy, matplotlib, networkx
 
 # Função para visualizar o grafo
-def visualizar_grafo(grafo, origem, destino , menor_caminho, peso_total):
+def visualizar_grafo(grafo,menor_caminho, peso_total):
     G = nx.DiGraph()  # Se o grafo for direcionado, use nx.DiGraph(); se não, use nx.Graph()
     
     # Adiciona os vértices e as arestas ao grafo

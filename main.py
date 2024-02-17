@@ -27,9 +27,10 @@ for linha in linhas:
     else:
         grafo[int(valor)] = [(int(chave), numero_aleatorio)]
 
-vertice_inicial = 0
-vertice_final = 1500
-trajeto, duracao_conexao = algoritmo.dijkstra(grafo, vertice_inicial, vertice_final)
+
+# Chamando a interface inicial
+origem, destino = mostrar_grafo.interface_inicial()
+trajeto, duracao_conexao = algoritmo.dijkstra(grafo, int(origem), int(destino))
 
 # criação do grafo para a formação da imagem
 grafo_imagem = {}
@@ -44,6 +45,6 @@ for index in range(len(trajeto)):
 # print(grafo_imagem)
 # print(trajeto)
 # print(duracao_conexao)
-origem, destino = mostrar_grafo.interface_inicial()
-mostrar_grafo.visualizar_grafo(grafo_imagem, origem, destino, trajeto, duracao_conexao)
+
+mostrar_grafo.visualizar_grafo(grafo_imagem,trajeto, duracao_conexao)
 # mostrar_grafo.visualizar_grafo(grafo_imagem, vertice_inicial, vertice_final)
