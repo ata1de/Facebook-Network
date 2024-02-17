@@ -59,5 +59,17 @@ for linha in linhas:
         grafo[int(valor)] = [(int(chave), numero_aleatorio)]
 
 trajeto, duracao_conexao = dijkstra(grafo, 0, 3000)
+
+# criação do grafo para a formação da imagem
+grafo_imagem = {}
+for index in range(len(trajeto)):
+    vertice_trajeto =  grafo[trajeto[index]]
+    for elementos in vertice_trajeto:
+        if index == len(trajeto) - 1:
+            break
+        if elementos[0] == trajeto[index+1]:
+            grafo_imagem[trajeto[index]] = elementos
+
+print(grafo_imagem)
 print(trajeto)
 print(duracao_conexao)

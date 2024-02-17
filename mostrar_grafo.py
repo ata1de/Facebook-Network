@@ -7,9 +7,9 @@ import main
 def visualizar_grafo(grafo):
     G = nx.DiGraph()  # Se o grafo for direcionado, use nx.DiGraph(); se não, use nx.Graph()
     
-    # Adiciona arestas ao grafo
+    # Adiciona os vértices e as arestas ao grafo
     for vertice, vizinhos in grafo.items():
-        for vizinho, peso in vizinhos:
+        for vizinho, peso in vizinhos.items():
             G.add_edge(vertice, vizinho, weight=peso)
 
     # Posiciona os nós usando o layout Kamada-Kawai
@@ -30,4 +30,4 @@ def visualizar_grafo(grafo):
     plt.show()
 
 # Chamada da função para visualizar o grafo
-visualizar_grafo(main.grafo)
+visualizar_grafo(main.grafo_imagem)
