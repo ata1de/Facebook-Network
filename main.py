@@ -58,7 +58,9 @@ for linha in linhas:
     else:
         grafo[int(valor)] = [(int(chave), numero_aleatorio)]
 
-trajeto, duracao_conexao = dijkstra(grafo, 0, 3000)
+vertice_inicial = 0
+vertice_final = 1500
+trajeto, duracao_conexao = dijkstra(grafo, vertice_inicial, vertice_final)
 
 # criação do grafo para a formação da imagem
 grafo_imagem = {}
