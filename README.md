@@ -4,9 +4,9 @@ Este projeto foi realizado como parte da cadeira de Algoritmos. Nele, os grupos 
 
 
 ## Interface
-![alt text](image.png)
+![alt text](/assets/image.png)
 
-![alt text](image-1.png)
+![alt text](/assets/image-1.png)
 
 ## Informações
 
