@@ -30,4 +30,5 @@ def dijkstra(grafo: dict, vertice_inicial: int, vertice_final: int) -> tuple:
                 quadro_distancias[vizinho] = peso_cumulativo
                 fila_visita.append((peso_cumulativo, vizinho))
 
+
     return rastrear_caminho(grafo, quadro_distancias, vertice_inicial, vertice_final), quadro_distancias[vertice_final]
