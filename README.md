@@ -8,10 +8,26 @@ Este projeto foi realizado como parte da cadeira de Algoritmos. Nele, os grupos 
 
 ![alt text](image-1.png)
 
+## Informações
+
+- Base de dados utilizado foi relacionado as conexões do Facebook
+- Matplotlib, networkx, tkinter, scipy foram as bibliotecas utilizadas
+
 ## Instruções
+Siga esses passos para analisar o projeto
+
+- Clone o repositório
 
 ```
-
+git clone https://github.com/ata1de/Facebook-Network.git
 ```
+- instale as bibliotecas 
+```
+pip install matplotlib networkx scipy
+```
+- clique em run e aproveite 😁
 
+
+**OBSERVAÇÃO !!!!**
+- Após inserir os vértices desejados no campo de entrada e clicar no botão 'Enviar', feche a aba clicando no botão 'X' para visualizar o grafo desenhado.
 
