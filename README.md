@@ -1,5 +1,10 @@
-# Facebook Network
-Esse projeto foi um trabalho de algoritmo, no qual o grupo escolhia uma base de dados na internet, referente a algum tipo de ligação onde se pode montar um grafo, e a partir desse database montava um grafo com vertices e os pesos, se não houvesse tinha que colocar os pesos, nas suas repectivas conexões. Com a base de dados pronta o grupo tinha o objetivo de usar o algoritmo dijkstra para mostrar o caminho mais curto entre o vertice inicial e o final.
+
+<h1 align='center'>💠Facebook Network💙</h1>
+Este projeto foi realizado como parte da cadeira de Algoritmos. Nele, os grupos selecionavam uma base de dados disponível na internet relacionada a algum tipo de conexão que pudesse ser representada por um grafo. A partir dessa base de dados, construíamos um grafo com vértices e arestas, atribuindo pesos às conexões quando não estavam explicitamente fornecidos. Com o grafo pronto, nosso objetivo era aplicar o algoritmo de Dijkstra para encontrar o caminho mais curto entre um vértice inicial e um vértice final.
 
 ## Interface
 ![alt text](image.png)
+
+![alt text](image-1.png)
+
+
