@@ -8,6 +8,10 @@ Este projeto foi realizado como parte da cadeira de Algoritmos. Nele, os grupos 
 
 ![alt text](/assets/image-1.png)
 
+## Contribuições
+- <a href='https://github.com/ericlbarreto' target="_blank" >Eric bezerra</a>
+- <a href='https://github.com/ata1de' target="_blank" >Mateus Ataide</a>
+
 ## Informações
 
 - Base de dados utilizado foi relacionado as conexões do Facebook
